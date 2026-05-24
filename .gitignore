@@ -1,0 +1,23 @@
+# Python ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+venv/
+ENV/
+
+# Data ignores (keep folders but ignore heavy CSVs to prevent GitHub warning thresholds)
+data/raw/*.csv
+data/processed/*.csv
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Models ignores (if any, keep pure_ml_assets.json since it's only 30KB!)
+models/*.joblib
+!models/pure_ml_assets.json
+
+# Logs
+*.log
+.system_generated/

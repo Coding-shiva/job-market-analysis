@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Market Intelligence Platform</title>
+    <!-- Modern Google Font: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js CDN for beautiful interactive charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation & Filters -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fa-solid fa-briefcase logo-icon"></i>
+                <div>
+                    <h2>Market Intelligence</h2>
+                    <span>Hiring Analytics Hub</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <h3>🧭 MODULES</h3>
+                <ul>
+                    <li class="nav-item active" data-tab="overview">
+                        <i class="fa-solid fa-chart-line"></i> Market Overview
+                    </li>
+                    <li class="nav-item" data-tab="skills">
+                        <i class="fa-solid fa-code"></i> Tech Stack Analytics
+                    </li>
+                    <li class="nav-item" data-tab="predict">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> ML Salary Estimator
+                    </li>
+                    <li class="nav-item" data-tab="advisor">
+                        <i class="fa-solid fa-lightbulb"></i> AI Career Advisor
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-filters">
+                <h3><i class="fa-solid fa-sliders"></i> FILTER SETTINGS</h3>
+                
+                <div class="filter-group">
+                    <label>Job Category</label>
+                    <div id="filter-categories" class="checkbox-group"></div>
+                </div>
+
+                <div class="filter-group">
+                    <label>Hiring Hub / City</label>
+                    <div id="filter-cities" class="checkbox-group"></div>
+                </div>
+
+                <div class="filter-group">
+                    <label>Work Arrangement</label>
+                    <div id="filter-types" class="checkbox-group"></div>
+                </div>
+
+                <button id="btn-reset-filters" class="btn-secondary">
+                    <i class="fa-solid fa-rotate-left"></i> Reset Filter Selection
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="main-content">
+            <!-- Global Dashboard Title -->
+            <header class="main-header">
+                <div>
+                    <h1 class="glow-text">Job Market Intelligence Platform</h1>
+                    <p class="subtitle">Interactive Market Intelligence Engine Analyzing 55,000+ Software & Data Job Postings</p>
+                </div>
+            </header>
+
+            <!-- Glowing KPI cards panel -->
+            <section class="kpi-panel">
+                <div class="kpi-card">
+                    <div class="kpi-icon-container cyan"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                    <div class="kpi-info">
+                        <div id="kpi-jobs" class="kpi-value">0</div>
+                        <div class="kpi-label">Active Job Postings</div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon-container violet"><i class="fa-solid fa-building"></i></div>
+                    <div class="kpi-info">
+                        <div id="kpi-companies" class="kpi-value">0</div>
+                        <div class="kpi-label">Hiring Companies</div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon-container rose"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <div class="kpi-info">
+                        <div id="kpi-salary" class="kpi-value">$0</div>
+                        <div class="kpi-label">National Salary Avg</div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon-container amber"><i class="fa-solid fa-house-laptop"></i></div>
+                    <div class="kpi-info">
+                        <div id="kpi-remote" class="kpi-value">0.0%</div>
+                        <div class="kpi-label">Remote Share Ratio</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loading Spinner Overlay -->
+            <div id="loading-spinner" class="spinner-container">
+                <div class="spinner"></div>
+                <p>Retrieving database analytical aggregates...</p>
+            </div>
+
+            <!-- Tab Content: 1. Overview -->
+            <div id="tab-overview" class="tab-content active">
+                <div class="section-title">Market Distribution & Velocity Insights</div>
+                <div class="chart-row">
+                    <div class="chart-card">
+                        <h3>Hiring Velocity Trends Over Time</h3>
+                        <div class="chart-container"><canvas id="chart-trends"></canvas></div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Market Salary Distribution (USD)</h3>
+                        <div class="chart-container"><canvas id="chart-salary-dist"></canvas></div>
+                    </div>
+                </div>
+
+                <div class="section-title">Workplace Dynamics & Experience Correlation</div>
+                <div class="chart-row">
+                    <div class="chart-card flex-1">
+                        <h3>Work Arrangement Distribution</h3>
+                        <div class="chart-container-donut"><canvas id="chart-job-setup"></canvas></div>
+                    </div>
+                    <div class="chart-card flex-2">
+                        <h3>Experience vs Salary Correlation</h3>
+                        <div class="chart-container"><canvas id="chart-scatter"></canvas></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: 2. Tech Stack -->
+            <div id="tab-skills" class="tab-content">
+                <div class="section-title">Tech Stack Dominance & Co-occurrence Matrix</div>
+                <div class="chart-row">
+                    <div class="chart-card">
+                        <h3>Top 12 In-Demand Skills</h3>
+                        <div class="chart-container"><canvas id="chart-skills-bar"></canvas></div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Technology Co-occurrence Matrix Heatmap (%)</h3>
+                        <div class="chart-container-heatmap">
+                            <table id="heatmap-table" class="heatmap-grid"></table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-title">High-Value Technology Premium Benchmarks</div>
+                <div class="table-card">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Skill / Technology</th>
+                                <th>Total Open Listings</th>
+                                <th>Market Average Compensation (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="skills-premium-table">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tab Content: 3. ML Salary Estimator -->
+            <div id="tab-predict" class="tab-content">
+                <div class="section-title">AI Salary Prediction Engine</div>
+                <div class="estimator-container">
+                    <div class="estimator-form">
+                        <h3>🔮 Compensation Input Attributes</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="pred-category">Discipline / Category</label>
+                                <select id="pred-category" class="form-select"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="pred-city">Target Hiring Center / City</label>
+                                <select id="pred-city" class="form-select"></select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="pred-type">Work Arrangement Format</label>
+                                <select id="pred-type" class="form-select"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="pred-experience">Required Experience: <span id="exp-val">3</span> years</label>
+                                <input type="range" id="pred-experience" min="0" max="15" value="3" class="form-range">
+                            </div>
+                        </div>
+
+                        <div class="skills-selector-header">🛠️ Select Associated Technologies & Tools</div>
+                        <div id="pred-skills-grid" class="skills-grid">
+                            <!-- Checked skills grid -->
+                        </div>
+
+                        <button id="btn-predict" class="btn-primary">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Calculate Estimated Annual Salary Range
+                        </button>
+                    </div>
+
+                    <!-- Predictor Outputs -->
+                    <div id="predict-results" class="predict-results-panel" style="display:none;">
+                        <h3>🎯 Estimated target compensation range successfully!</h3>
+                        <div class="results-row">
+                            <div class="result-metric">
+                                <div class="metric-val" id="res-avg">$0.00</div>
+                                <div class="metric-lbl">ESTIMATED ANNUAL SALARY (AVERAGE)</div>
+                            </div>
+                            <div class="result-metric">
+                                <div class="metric-val-bounds" id="res-range">$0 - $0</div>
+                                <div class="metric-lbl">VALUATION BOUNDS / RANGE (+/- 10%)</div>
+                            </div>
+                        </div>
+                        <div class="result-tip">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span id="res-tips"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: 4. AI Career Advisor -->
+            <div id="tab-advisor" class="tab-content">
+                <div class="section-title">Automated Hiring & Career Advisor</div>
+                <div class="advisor-row">
+                    <!-- Emerging and sector trends -->
+                    <div class="advisor-card">
+                        <h3>📈 Sector-Wide Hiring Dynamics</h3>
+                        <p class="lead-p">Calculates linear regressions on skill-demand monthly slopes to isolate rising technologies.</p>
+                        
+                        <h4>🔥 Emerging & Rising Technologies (Monthly Share Growth)</h4>
+                        <ul id="emerging-list" class="trend-ul">
+                            <!-- Populated dynamically -->
+                        </ul>
+
+                        <h4 class="mt-4">🏢 Industry Compensation Benchmarks</h4>
+                        <table class="data-table mt-2">
+                            <thead>
+                                <tr>
+                                    <th>Industry Sector</th>
+                                    <th>Open Jobs Volume</th>
+                                    <th>Avg Annual Salary (USD)</th>
+                                    <th>Avg Exp Required</th>
+                                </tr>
+                            </thead>
+                            <tbody id="industries-table">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Personalized Career Pathway Advisor -->
+                    <div class="advisor-card">
+                        <h3>🎓 Personalised Career Accelerator</h3>
+                        <p class="lead-p">Submit your profile attributes to evaluate skill gaps and target compensation premiums.</p>
+
+                        <div class="advisor-form">
+                            <div class="form-group">
+                                <label for="adv-category">Current Category / Track</label>
+                                <select id="adv-category" class="form-select"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="adv-target">Target Career Pivot (Or Same)</label>
+                                <select id="adv-target" class="form-select"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="adv-skills">Enter your current skills (comma-separated)</label>
+                                <textarea id="adv-skills" class="form-textarea" rows="3" placeholder="e.g. Python, SQL, Git"></textarea>
+                            </div>
+                            <button id="btn-advisor" class="btn-primary">
+                                <i class="fa-solid fa-rocket"></i> Analyze Skill Gap & Target Premium
+                            </button>
+                        </div>
+
+                        <!-- advisor summary output -->
+                        <div id="advisor-results" class="advisor-results-panel" style="display:none;">
+                            <h4>💬 AI Recommendation Summary</h4>
+                            <p id="adv-summary-txt" class="summary-txt"></p>
+                            
+                            <h4 class="mt-4">📊 Target Skill Premium Benchmarks</h4>
+                            <table class="data-table mt-2">
+                                <thead>
+                                    <tr>
+                                        <th>Highly Demanded Skill</th>
+                                        <th>Open Listings Count</th>
+                                        <th>Average Salary Associated</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="advisor-table-body">
+                                    <!-- Populated dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-title">💾 Export Analytics & Job Datasets</div>
+                <div class="download-card">
+                    <p>Generate a downloadable file containing the filtered job postings for downstream integrations, offline analysis, or executive briefing packs.</p>
+                    <button id="btn-download-csv" class="btn-download">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download Cleaned Filtered Dataset (CSV)
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
