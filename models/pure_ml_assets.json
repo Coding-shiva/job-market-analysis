@@ -1,90 +1,90 @@
 {
     "salary_predictor": {
-        "global_average": 208426.60141818182,
-        "experience_slope": 10285.42437618496,
+        "global_average": 17316874.804545455,
+        "experience_slope": 854888.3307826541,
         "category_offsets": {
-            "Software Engineering": -56650.28982867324,
-            "Full-Stack": -78976.19581642615,
-            "AI/ML": -23451.04327439191,
-            "DevOps/Cloud": -52422.236790549854,
-            "Data Science": -70985.69675193293
+            "Software Engineering": -4707530.213360198,
+            "Full-Stack": -6563411.358176973,
+            "AI/ML": -1950837.9404711276,
+            "DevOps/Cloud": -4358278.565834686,
+            "Data Science": -5899398.063571565
         },
         "city_offsets": {
-            "New York": -20163.610217672365,
-            "San Francisco": -19829.787941080955,
-            "Hyderabad": -119708.00325098993,
-            "Austin": -46276.315003704774,
-            "Berlin": -70852.38175369453,
-            "London": -31478.128926246805,
-            "Remote": -54782.21139272963,
-            "Los Angeles": -46278.17976505926,
-            "Denver": -63853.55879187246,
-            "Chicago": -62845.94726423346,
-            "Atlanta": -63421.28404191864,
-            "Sydney": -45703.85154962723,
-            "Boston": -45872.91641422751,
-            "Toronto": -45801.18758541366,
-            "Paris": -70407.06371051635,
-            "Bangalore": -117623.1752686739,
-            "Vancouver": -63843.5093720007,
-            "Seattle": -19929.071022818098
+            "New York": -1697343.5557428934,
+            "San Francisco": -1669638.6460444797,
+            "Hyderabad": -9935268.02702273,
+            "Austin": -3864546.6683239527,
+            "Berlin": -5863606.635298882,
+            "London": -2478423.6948743556,
+            "Remote": -4555069.096872926,
+            "Los Angeles": -3865042.563496137,
+            "Denver": -5323532.027264584,
+            "Chicago": -5239887.55422218,
+            "Atlanta": -5287931.419297405,
+            "Sydney": -3817074.446409136,
+            "Boston": -3830840.508172108,
+            "Toronto": -3825275.3498241827,
+            "Paris": -5824667.433098469,
+            "Bangalore": -9762792.311650265,
+            "Vancouver": -5322555.3718152065,
+            "Seattle": -1677763.0551484302
         },
         "type_offsets": {
-            "Onsite": -55924.4708752936,
-            "Hybrid": -57507.072651033464,
-            "Remote": -55236.900047858566
+            "Onsite": -4648155.266569762,
+            "Hybrid": -4778346.551482679,
+            "Remote": -4592656.415686833
         },
         "skill_offsets": {
-            "Python": 4051.2916277965446,
-            "AWS": 4003.7718771338014,
-            "Git": 2388.2092885745865,
-            "SQL": -432.4809061603941,
-            "Docker": 8128.73748188818,
-            "Kubernetes": 7693.3401806322645,
-            "C++": 9455.716666530921,
-            "Linux": 1201.366167535598,
-            "TensorFlow": 15216.053730617894,
-            "MLflow": 15919.869399288642,
-            "Keras": 15313.088272413494,
-            "JavaScript": -10382.631124350773,
-            "Transformers": 14910.761793502179,
-            "scikit-learn": 15436.929057925101,
-            "PyTorch": 15011.711969751383,
-            "Angular": -10607.516828196272,
-            "TypeScript": -10258.707015304248,
-            "PostgreSQL": -10469.254391518218,
-            "Hugging Face": 15332.177515412102,
-            "Express.js": -10559.002681521448,
-            "React": -10223.632939049714,
-            "Next.js": -10691.25006770054,
-            "Node.js": -10399.831725700029,
-            "Tailwind CSS": -10606.699259382289,
-            "CSS3": -10523.00792841528,
-            "MongoDB": -10560.603973627361,
-            "Spring Boot": 840.655249711311,
-            "Java": -5363.709214434962,
-            "HTML5": -10500.031942197395,
-            "gRPC": 829.6383041126231,
-            "Go": 1125.4869866144334,
-            "Rust": 1248.7316131264058,
-            "Vue.js": -10530.42510259328,
-            "Microservices": 882.166408039807,
-            "Tableau": -6507.889143739328,
-            "R": -5757.077163755078,
-            "Excel": -6724.578717143358,
-            "Snowflake": -6486.930042749525,
-            "Hadoop": -6594.426642691868,
-            "Scala": -6631.971729679109,
-            "Power BI": -6955.354325010938,
-            "Airflow": -7017.985166462089,
-            "Spark": -6958.91882840061,
-            "Pandas": -6663.129768068051,
-            "dbt": -6927.053216098774,
-            "NumPy": -7025.6533994080555,
-            "GCP": 1313.1727783791794,
-            "Jenkins": 1671.1899631670183,
-            "Azure": 1774.8288499985954,
-            "Grafana": 2090.3508288669414
+            "Python": 336129.5379970294,
+            "AWS": 332768.9867242411,
+            "Git": 198716.65422748515,
+            "SQL": -35710.252636051926,
+            "Docker": 675272.2110575162,
+            "Kubernetes": 639404.5733322563,
+            "C++": 785341.2320625706,
+            "Linux": 99321.15291028703,
+            "TensorFlow": 1263800.6703188587,
+            "MLflow": 1321854.9815244845,
+            "Keras": 1271619.0436914826,
+            "JavaScript": -862562.4069616671,
+            "Transformers": 1238586.2871475744,
+            "scikit-learn": 1282275.7851530756,
+            "PyTorch": 1246977.0926720574,
+            "TypeScript": -852685.3421764182,
+            "Angular": -881369.9205253867,
+            "PostgreSQL": -870083.9658240866,
+            "Hugging Face": 1273268.5745171956,
+            "Express.js": -876978.1666265781,
+            "React": -849434.7480148453,
+            "Next.js": -888107.4142950501,
+            "Node.js": -864341.2402824174,
+            "Tailwind CSS": -881197.2351414165,
+            "CSS3": -873940.4598412592,
+            "MongoDB": -877282.9715571449,
+            "Spring Boot": 70165.73582709572,
+            "Java": -445439.22109580657,
+            "HTML5": -872375.2379522946,
+            "gRPC": 69142.92781349123,
+            "Go": 93420.29487303346,
+            "Rust": 103906.78736026185,
+            "Vue.js": -874247.105212773,
+            "Microservices": 73184.87071866235,
+            "Tableau": -540571.7348763731,
+            "R": -478022.99970636127,
+            "Excel": -558831.8718207135,
+            "Snowflake": -538945.5662206499,
+            "Hadoop": -547634.4925764604,
+            "Scala": -551517.1949729009,
+            "Power BI": -578139.1038380418,
+            "Airflow": -583669.7173867436,
+            "Spark": -578582.2655764463,
+            "Pandas": -553241.8569370067,
+            "dbt": -575262.9767313246,
+            "NumPy": -583469.018432324,
+            "GCP": 109789.39781203726,
+            "Jenkins": 139065.47491988036,
+            "Azure": 146879.57063632188,
+            "Grafana": 173698.22198986597
         },
         "top_50_skills": [
             "Python",
@@ -102,8 +102,8 @@
             "Transformers",
             "scikit-learn",
             "PyTorch",
-            "Angular",
             "TypeScript",
+            "Angular",
             "PostgreSQL",
             "Hugging Face",
             "Express.js",
@@ -143,21 +143,21 @@
         "vocab_scores": {
             "Software Engineering": {
                 "developer": 57.39126664064871,
+                "linux": 44.94601274879667,
                 "microservices": 44.98937600277525,
                 "kubernetes": 46.03009409826114,
-                "linux": 44.94601274879667,
                 "software": 56.805862711937905,
                 "engineer": 71.36507523524565,
-                "docker": 45.97589003078791,
                 "aws": 46.5070898920255,
                 "git": 51.60227223450848,
-                "python": 46.160183860196874,
                 "mongodb": 6.190104505442088,
-                "grpc": 44.90264949481809,
+                "python": 46.160183860196874,
+                "docker": 45.97589003078791,
                 "sql": 45.70486969342179,
+                "grpc": 44.90264949481809,
                 "staff": 13.843718832661203,
-                "css3": 6.146741251463509,
                 "java": 59.50522527210442,
+                "css3": 6.146741251463509,
                 "rust": 44.664151597935906,
                 "embedded": 14.288192185941634,
                 "systems": 14.288192185941634,
@@ -166,16 +166,16 @@
                 "transformers": 0.7913793851090586,
                 "web": 14.136420797016607,
                 "applications": 14.136420797016607,
-                "angular": 6.211786132431378,
-                "typescript": 6.4719656563028485,
                 "html5": 5.994969862538485,
+                "typescript": 6.4719656563028485,
+                "angular": 6.211786132431378,
                 "senior": 14.429122761372014,
-                "javascript": 6.30935345388318,
-                "postgresql": 6.211786132431378,
                 "terraform": 0.44447335328043014,
+                "postgresql": 6.211786132431378,
+                "javascript": 6.30935345388318,
+                "express": 6.200945318936733,
                 "tailwind": 6.060014743506352,
                 "css": 6.060014743506352,
-                "express": 6.200945318936733,
                 "hadoop": 0.5637223017215212,
                 "spark": 0.5745631152161659,
                 "vue": 5.68058627119379,
@@ -211,21 +211,21 @@
             "Full-Stack": {
                 "react": 61.22719149217836,
                 "developer": 73.494693643404,
-                "mongodb": 46.12448425744103,
-                "grpc": 0.7942987004390707,
-                "css3": 46.60988901882047,
-                "javascript": 62.407607616441986,
                 "express": 46.70917635637535,
+                "css3": 46.60988901882047,
+                "mongodb": 46.12448425744103,
+                "javascript": 62.407607616441986,
+                "grpc": 0.7942987004390707,
                 "full": 29.311828431480702,
                 "stack": 29.311828431480702,
-                "angular": 47.205613044149764,
+                "kubernetes": 1.89749133993778,
                 "typescript": 62.01045826622244,
-                "vue": 46.05829269907112,
                 "next": 46.54369746045054,
+                "angular": 47.205613044149764,
                 "tailwind": 46.444410122895654,
                 "css": 46.444410122895654,
                 "node": 61.469893872868084,
-                "kubernetes": 1.89749133993778,
+                "vue": 46.05829269907112,
                 "html5": 46.05829269907112,
                 "postgresql": 47.040134148224965,
                 "scala": 0.5846920989343158,
@@ -276,25 +276,25 @@
                 "vision": 12.893803864297999,
                 "engineer": 91.34231992390542,
                 "mlflow": 46.99224642345865,
+                "tensorflow": 46.25243800501532,
                 "scikit": 45.9738088604068,
                 "learn": 45.9738088604068,
-                "tensorflow": 46.25243800501532,
-                "docker": 47.25165976499073,
-                "jenkins": 0.6533373045993024,
                 "aws": 47.34773878037298,
-                "git": 46.68479357423546,
-                "python": 47.37656248498765,
                 "hugging": 46.03145626963615,
                 "face": 46.03145626963615,
+                "git": 46.68479357423546,
+                "jenkins": 0.6533373045993024,
+                "python": 47.37656248498765,
+                "docker": 47.25165976499073,
                 "data": 13.537533267359077,
                 "scientist": 26.46016083627175,
                 "specialization": 13.537533267359077,
-                "keras": 46.7808725896177,
                 "pytorch": 46.21400639886242,
                 "kubernetes": 46.63675406654433,
+                "keras": 46.7808725896177,
+                "sql": 46.80008839269415,
                 "spring": 0.5668661907552771,
                 "boot": 0.5668661907552771,
-                "sql": 46.80008839269415,
                 "transformers": 46.3196933157829,
                 "nlp": 12.989882879680248,
                 "llm": 12.682430030457049,
@@ -344,15 +344,15 @@
             "DevOps/Cloud": {
                 "platform": 17.84823368471876,
                 "engineer": 109.42303049810896,
-                "microservices": 8.690754003379737,
                 "grafana": 42.23062686086747,
                 "linux": 50.82481693087632,
+                "microservices": 8.690754003379737,
                 "python": 51.24326064215016,
                 "ansible": 41.76390118290818,
+                "hadoop": 0.5311016335398728,
+                "terraform": 41.71561921622274,
                 "bash": 40.878731793675065,
                 "docker": 52.19280598696387,
-                "terraform": 41.71561921622274,
-                "hadoop": 0.5311016335398728,
                 "site": 17.027440251066228,
                 "reliability": 17.027440251066228,
                 "aws": 50.712159008610286,
@@ -361,9 +361,9 @@
                 "security": 18.781685040637324,
                 "jenkins": 42.77782248330249,
                 "systems": 21.083125452643436,
+                "sql": 10.139213003943027,
                 "spring": 9.334513559185645,
                 "boot": 9.334513559185645,
-                "sql": 10.139213003943027,
                 "node": 0.7886054558622355,
                 "rust": 9.012633781282691,
                 "devops": 17.62291784018669,
@@ -375,8 +375,8 @@
                 "azure": 42.19843888307717,
                 "git": 10.284058903999357,
                 "angular": 0.7242295002816448,
-                "grpc": 8.626378047799147,
                 "java": 9.173573670234168,
+                "grpc": 8.626378047799147,
                 "tailwind": 0.6437595558059065,
                 "css": 0.6437595558059065,
                 "postgresql": 0.6920415224913494,
@@ -412,22 +412,22 @@
             "Data Science": {
                 "data": 84.25817757009347,
                 "analyst": 41.71186582109479,
-                "scala": 46.55165220293725,
                 "aws": 48.575183578104145,
-                "python": 48.59604472630174,
-                "dbt": 45.97797062750334,
-                "excel": 47.062750333778375,
-                "airflow": 46.217873831775705,
                 "spark": 46.07184579439252,
+                "scala": 46.55165220293725,
+                "excel": 47.062750333778375,
                 "pandas": 45.936248331108146,
+                "dbt": 45.97797062750334,
+                "python": 48.59604472630174,
+                "airflow": 46.217873831775705,
                 "lead": 13.924816421895862,
                 "scientist": 27.79747997329773,
-                "tableau": 47.22963951935914,
                 "power": 46.29088785046729,
                 "html5": 0.8240153538050734,
+                "tableau": 47.22963951935914,
+                "hadoop": 46.624666221628836,
                 "sql": 48.66905874499332,
                 "numpy": 45.5607476635514,
-                "hadoop": 46.624666221628836,
                 "quantitative": 14.018691588785046,
                 "bash": 0.7718624833110814,
                 "kubernetes": 1.9505173564753004,
@@ -488,6 +488,13 @@
     },
     "recommender": {
         "cooccurrences": {
+            "Linux": [
+                "AWS",
+                "Python",
+                "Kubernetes",
+                "Docker",
+                "Git"
+            ],
             "Microservices": [
                 "Python",
                 "AWS",
@@ -502,33 +509,12 @@
                 "SQL",
                 "C++"
             ],
-            "Linux": [
-                "AWS",
-                "Python",
-                "Kubernetes",
-                "Docker",
-                "Git"
-            ],
-            "React": [
+            "Express.js": [
                 "Git",
-                "PostgreSQL",
+                "Tailwind CSS",
+                "Angular",
                 "JavaScript",
-                "Node.js",
-                "TypeScript"
-            ],
-            "MongoDB": [
-                "Git",
-                "TypeScript",
-                "JavaScript",
-                "PostgreSQL",
                 "React"
-            ],
-            "gRPC": [
-                "AWS",
-                "Python",
-                "Kubernetes",
-                "Git",
-                "SQL"
             ],
             "CSS3": [
                 "Git",
@@ -537,6 +523,20 @@
                 "PostgreSQL",
                 "Next.js"
             ],
+            "MongoDB": [
+                "Git",
+                "TypeScript",
+                "JavaScript",
+                "PostgreSQL",
+                "React"
+            ],
+            "React": [
+                "Git",
+                "PostgreSQL",
+                "JavaScript",
+                "Node.js",
+                "TypeScript"
+            ],
             "JavaScript": [
                 "Git",
                 "Angular",
@@ -544,14 +544,7 @@
                 "Tailwind CSS",
                 "PostgreSQL"
             ],
-            "Express.js": [
-                "Git",
-                "Tailwind CSS",
-                "Angular",
-                "JavaScript",
-                "React"
-            ],
-            "Docker": [
+            "gRPC": [
                 "AWS",
                 "Python",
                 "Kubernetes",
@@ -579,6 +572,13 @@
                 "Kubernetes",
                 "Git"
             ],
+            "Docker": [
+                "AWS",
+                "Python",
+                "Kubernetes",
+                "Git",
+                "SQL"
+            ],
             "MLflow": [
                 "Python",
                 "SQL",
@@ -586,17 +586,17 @@
                 "Docker",
                 "C++"
             ],
-            "scikit-learn": [
-                "Python",
-                "SQL",
-                "AWS",
-                "Docker",
-                "Git"
-            ],
             "TensorFlow": [
                 "SQL",
                 "AWS",
                 "Python",
+                "Docker",
+                "Git"
+            ],
+            "scikit-learn": [
+                "Python",
+                "SQL",
+                "AWS",
                 "Docker",
                 "Git"
             ],
@@ -614,12 +614,12 @@
                 "Kubernetes",
                 "Linux"
             ],
-            "Bash": [
+            "Hadoop": [
+                "SQL",
                 "Python",
                 "AWS",
-                "Docker",
-                "Kubernetes",
-                "Azure"
+                "Tableau",
+                "Excel"
             ],
             "Terraform": [
                 "Python",
@@ -628,40 +628,12 @@
                 "AWS",
                 "Linux"
             ],
-            "Hadoop": [
-                "SQL",
+            "Bash": [
                 "Python",
                 "AWS",
-                "Tableau",
-                "Excel"
-            ],
-            "Scala": [
-                "AWS",
-                "SQL",
-                "Python",
-                "R",
-                "Excel"
-            ],
-            "dbt": [
-                "Python",
-                "AWS",
-                "SQL",
-                "Tableau",
-                "R"
-            ],
-            "Excel": [
-                "SQL",
-                "AWS",
-                "Python",
-                "R",
-                "Snowflake"
-            ],
-            "Airflow": [
-                "Python",
-                "AWS",
-                "SQL",
-                "Tableau",
-                "Excel"
+                "Docker",
+                "Kubernetes",
+                "Azure"
             ],
             "Spark": [
                 "Python",
@@ -670,6 +642,20 @@
                 "R",
                 "Tableau"
             ],
+            "Scala": [
+                "AWS",
+                "SQL",
+                "Python",
+                "R",
+                "Excel"
+            ],
+            "Excel": [
+                "SQL",
+                "AWS",
+                "Python",
+                "R",
+                "Snowflake"
+            ],
             "Pandas": [
                 "Python",
                 "SQL",
@@ -677,12 +663,19 @@
                 "Snowflake",
                 "R"
             ],
-            "Tableau": [
+            "dbt": [
                 "Python",
                 "AWS",
                 "SQL",
-                "Spark",
-                "Airflow"
+                "Tableau",
+                "R"
+            ],
+            "Airflow": [
+                "Python",
+                "AWS",
+                "SQL",
+                "Tableau",
+                "Excel"
             ],
             "Power BI": [
                 "AWS",
@@ -698,19 +691,19 @@
                 "Express.js",
                 "JavaScript"
             ],
+            "Tableau": [
+                "Python",
+                "AWS",
+                "SQL",
+                "Spark",
+                "Airflow"
+            ],
             "R": [
                 "AWS",
                 "Python",
                 "SQL",
                 "Excel",
                 "Scala"
-            ],
-            "Jenkins": [
-                "Python",
-                "Docker",
-                "Kubernetes",
-                "AWS",
-                "Linux"
             ],
             "Hugging Face": [
                 "Python",
@@ -719,6 +712,13 @@
                 "SQL",
                 "Git"
             ],
+            "Jenkins": [
+                "Python",
+                "Docker",
+                "Kubernetes",
+                "AWS",
+                "Linux"
+            ],
             "C++": [
                 "Python",
                 "Docker",
@@ -726,18 +726,18 @@
                 "AWS",
                 "Kubernetes"
             ],
-            "Keras": [
-                "AWS",
-                "Kubernetes",
-                "Python",
-                "C++",
-                "Git"
-            ],
             "PyTorch": [
                 "AWS",
                 "SQL",
                 "Docker",
                 "Python",
+                "Git"
+            ],
+            "Keras": [
+                "AWS",
+                "Kubernetes",
+                "Python",
+                "C++",
                 "Git"
             ],
             "SQL": [
@@ -754,13 +754,6 @@
                 "Airflow",
                 "Snowflake"
             ],
-            "Angular": [
-                "Git",
-                "PostgreSQL",
-                "JavaScript",
-                "Express.js",
-                "Next.js"
-            ],
             "TypeScript": [
                 "Git",
                 "JavaScript",
@@ -768,19 +761,19 @@
                 "MongoDB",
                 "HTML5"
             ],
-            "Vue.js": [
-                "Git",
-                "PostgreSQL",
-                "Next.js",
-                "Angular",
-                "HTML5"
-            ],
             "Next.js": [
                 "Git",
                 "JavaScript",
-                "Angular",
                 "TypeScript",
+                "Angular",
                 "PostgreSQL"
+            ],
+            "Angular": [
+                "Git",
+                "PostgreSQL",
+                "JavaScript",
+                "Express.js",
+                "Next.js"
             ],
             "Tailwind CSS": [
                 "JavaScript",
@@ -795,6 +788,13 @@
                 "Angular",
                 "Tailwind CSS",
                 "CSS3"
+            ],
+            "Vue.js": [
+                "Git",
+                "PostgreSQL",
+                "Next.js",
+                "Angular",
+                "HTML5"
             ],
             "Prometheus": [
                 "AWS",
@@ -817,19 +817,19 @@
                 "C++",
                 "SQL"
             ],
-            "Go": [
-                "Python",
-                "AWS",
-                "Git",
-                "Docker",
-                "SQL"
-            ],
             "Java": [
                 "AWS",
                 "Python",
                 "Docker",
                 "Kubernetes",
                 "Git"
+            ],
+            "Go": [
+                "Python",
+                "AWS",
+                "Git",
+                "Docker",
+                "SQL"
             ],
             "Rust": [
                 "Git",
@@ -860,8 +860,8 @@
                 "React"
             ],
             "GCP": [
-                "Docker",
                 "Python",
+                "Docker",
                 "AWS",
                 "Kubernetes",
                 "Linux"

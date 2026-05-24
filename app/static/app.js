@@ -164,7 +164,7 @@ async function updateDashboard() {
         // Update KPI displays
         kpiJobs.textContent = kpiData.kpis.total_jobs.toLocaleString();
         kpiCompanies.textContent = kpiData.kpis.total_companies.toLocaleString();
-        kpiSalary.textContent = `$${Math.round(kpiData.kpis.avg_salary).toLocaleString()}`;
+        kpiSalary.textContent = `₹${Math.round(kpiData.kpis.avg_salary).toLocaleString()}`;
         kpiRemote.textContent = `${kpiData.kpis.remote_pct.toFixed(1)}%`;
         
         // 2. Fetch Charts Data
@@ -337,7 +337,7 @@ function renderScatterChart(data) {
                     callbacks: {
                         label: (context) => {
                             const point = context.raw;
-                            return `${point.title} (${point.company}): Exp: ${point.x} yrs, Salary: $${Math.round(point.y).toLocaleString()}`;
+                            return `${point.title} (${point.company}): Exp: ${point.x} yrs, Salary: ₹${Math.round(point.y).toLocaleString()}`;
                         }
                     }
                 }
@@ -353,7 +353,7 @@ function renderScatterChart(data) {
                     grid: { color: "#1f2937" },
                     ticks: {
                         color: "#9ca3af",
-                        callback: (val) => `$${val.toLocaleString()}`
+                        callback: (val) => `₹${val.toLocaleString()}`
                     }
                 }
             }
@@ -447,7 +447,7 @@ function renderSkillsPremiumTable(premiums) {
         tdCount.textContent = p.job_count.toLocaleString();
         
         const tdSalary = document.createElement("td");
-        tdSalary.textContent = `$${Math.round(p.average_salary).toLocaleString()}`;
+        tdSalary.textContent = `₹${Math.round(p.average_salary).toLocaleString()}`;
         tdSalary.style.color = "#00f2fe";
         tdSalary.style.fontWeight = "600";
         
@@ -541,8 +541,8 @@ async function initEstimator() {
             const pred = await predRes.json();
             
             // Format metrics
-            resAvg.textContent = `$${pred.predicted_avg.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-            resRange.textContent = `$${Math.round(pred.predicted_min).toLocaleString()} - $${Math.round(pred.predicted_max).toLocaleString()}`;
+            resAvg.textContent = `₹${pred.predicted_avg.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            resRange.textContent = `₹${Math.round(pred.predicted_min).toLocaleString()} - ₹${Math.round(pred.predicted_max).toLocaleString()}`;
             
             // Update custom tips
             resTips.innerHTML = `<strong>Dynamic Insights:</strong> The average salary premium in <strong>${payload.city}</strong> for a candidate with <strong>${payload.experience} years</strong> of experience in <strong>${payload.category}</strong> is highly competitive. Adding hot technologies like ${payload.skills.slice(0,3).join(", ") || 'cloud platforms'} generally increases market value by 8% to 15% in similar roles.`;
@@ -629,7 +629,7 @@ async function initAdvisor() {
                     tdCount.textContent = s.market_demand.toLocaleString();
                     
                     const tdSalary = document.createElement("td");
-                    tdSalary.textContent = `$${Math.round(s.skill_avg_salary).toLocaleString()}`;
+                    tdSalary.textContent = `₹${Math.round(s.skill_avg_salary).toLocaleString()}`;
                     tdSalary.style.color = "#00f2fe";
                     
                     tr.appendChild(tdName);
@@ -684,7 +684,7 @@ async function loadAdvisorTrends() {
             tdCount.textContent = ind.job_count.toLocaleString();
             
             const tdSalary = document.createElement("td");
-            tdSalary.textContent = `$${Math.round(ind.average_salary).toLocaleString()}`;
+            tdSalary.textContent = `₹${Math.round(ind.average_salary).toLocaleString()}`;
             tdSalary.style.fontWeight = "600";
             
             const tdExp = document.createElement("td");

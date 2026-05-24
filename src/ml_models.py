@@ -49,7 +49,7 @@ def train_pure_ml_pipeline(cleaned_csv_path="data/processed/job_postings_cleaned
     
     # 1. Base Global Average
     global_avg = sum(r["salary_avg"] for r in rows) / num_records
-    print(f"  Global Baseline Salary: ${global_avg:,.2f} USD")
+    print(f"  Global Baseline Salary: Rs {global_avg:,.2f} INR")
     
     # 2. Fit Experience slope
     # Simple linear correlation estimate: delta_salary / delta_exp

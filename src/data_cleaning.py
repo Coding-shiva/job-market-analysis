@@ -5,7 +5,7 @@ import math
 
 def clean_salary(val, location_str):
     """
-    Parses messy salary strings and standardizes them to USD annual salaries.
+    Parses messy salary strings and standardizes them to INR (Indian Rupee) annual salaries.
     Pure Python implementation.
     """
     if not val or not isinstance(val, str) or val.strip() == "":
@@ -17,16 +17,16 @@ def clean_salary(val, location_str):
     if any(term in val_clean for term in ["competitive", "doe", "disclosed", "confidential", "negotiable"]):
         return None, None, None
 
-    # Identify currency multiplier
-    multiplier = 1.0
-    if "£" in val_clean:
-        multiplier = 1.25
+    # Identify currency multiplier to convert to INR (₹)
+    multiplier = 83.0  # Default assumption is USD ($) if no symbol, so multiply by 83 to get INR
+    if "₹" in val_clean or "inr" in val_clean or "rs" in val_clean:
+        multiplier = 1.0   # Already in INR
+    elif "£" in val_clean:
+        multiplier = 105.0 # Convert GBP to INR
     elif "€" in val_clean:
-        multiplier = 1.08
-    elif "₹" in val_clean or "inr" in val_clean:
-        multiplier = 0.012
-    elif "rs" in val_clean:
-        multiplier = 0.012
+        multiplier = 90.0  # Convert EUR to INR
+    elif "$" in val_clean:
+        multiplier = 83.0  # Convert USD to INR
         
     # Check if hourly rate
     is_hourly = False
@@ -58,8 +58,9 @@ def clean_salary(val, location_str):
     sal_min = sal_min * multiplier
     sal_max = sal_max * multiplier
     
-    if sal_min < 10000 or sal_min > 1000000:
-        if is_hourly and (sal_min / 2000) > 10000:
+    # Sanity checks in INR (e.g. min 1 Lakh per year, max 10 Crores per year)
+    if sal_min < 100000 or sal_min > 100000000:
+        if is_hourly and (sal_min / 2000) > 100000:
             sal_min /= 2000
             sal_max /= 2000
         else:
@@ -241,7 +242,7 @@ def run_data_cleaning_pipeline(input_path="data/raw/job_postings_raw.csv", outpu
     # Calculate medians in pure Python
     def get_median(lst):
         if not lst:
-            return 110000.0
+            return 9130000.0
         sorted_lst = sorted(lst)
         n = len(sorted_lst)
         if n % 2 == 1:

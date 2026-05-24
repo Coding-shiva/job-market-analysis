@@ -93,9 +93,9 @@ def verify_pipeline():
         print(f"  Mock Input Parameters:")
         print(f"    - Category: {category} | Arrangement: {jtype} | City: {city} | Exp: {experience} years")
         print(f"    - Skills: {', '.join(selected_skills)}")
-        print(f"  Predicted Salary Output: ${predicted_avg:,.2f} USD")
+        print(f"  Predicted Salary Output: Rs {predicted_avg:,.2f} INR")
         
-        assert predicted_avg > 40000, "Error: Predicted salary is implausibly low."
+        assert predicted_avg > 1000000, "Error: Predicted salary is implausibly low."
         print("  [PASS] Salary Prediction Engine inference test passed.")
         
     except Exception as e:

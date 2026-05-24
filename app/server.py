@@ -530,7 +530,7 @@ class JobMarketAPIHandler(BaseHTTPRequestHandler):
                 else:
                     recommendation_text += "you possess an outstanding, highly competitive skillset for this market! "
                     
-                recommendation_text += f"The current average market salary for **{target_cat}** is **${baseline:,.2f} USD**, with top percentiles commanding up to **${ceiling:,.2f} USD**."
+                recommendation_text += f"The current average market salary for **{target_cat}** is **₹{baseline:,.2f} INR**, with top percentiles commanding up to **₹{ceiling:,.2f} INR**."
                 
                 response_data = {
                     "recommendation_text": recommendation_text,
